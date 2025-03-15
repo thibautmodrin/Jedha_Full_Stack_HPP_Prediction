@@ -1,0 +1,199 @@
+Intitulé/modalités
+Identifiant
+"Identifiant accouchement: 
+Nombre de fois le même identifiant présente dans la base au cours des années de suivi (1,2,3)"
+Terme à l'accouchement en semaine d aménorrhée (SA)
+Poids de la mére (en kg)
+Taille de la mére (en cm)
+"Parité obstétricale : nombre d'enfants issues d'une grossesses antérieure vivants
+ou mort-né : de 0 à 9"
+"Corticotherapie : dose cumulée : 0,12,24,36…...mg"
+Declenchement : Non/Oui
+Type de grossesse
+Procréation : Non/Oui
+Initiation de l'allaitement maternel : Non/Oui
+"Aide médicale à la procréation (FIV, ICSI, TEC, insémination artificielle)"
+"Code césarienne : blanc, rouge, vert, orange"
+Etude du rythme cardiaque fœtal (C1 à C5)
+Type d'éxtraction instrumentale 
+les codes diagnostic CIM10 de la mère
+Lieu d'accouchement (code finess)
+"Age maternel calculé à partir de la date de naissance de la mére et la date d'accocuhement 
+exprimé en année "
+code PMSI du séjour de la mère 
+Date d'accouchement
+Année de l'accouchement
+"Niveau de l'etablissement d'accouchement : 
+1 : niveau 1, 1,2 : niveau 1a, 2 : niveau 2, 2,1 : niveau 2a, 2,2 : niveau 2b et niveau 3"
+"L'indice de masse corporelle (IMC, ou BMI en anglais) se calcule donc en divisant le poids par la taille au carré"
+Accouchement hors hopital (0 : Non/1 : Oui)
+Allaitement (0 : Non/1 : Oui)
+Anesthesie peridurale (0 : Non/1 : Oui)
+avortement spontane (0 : Non/1 : Oui)
+"Cesarienne
+1 : Cesarienne Sans indication
+2 : Cesarienne programmee
+3:Cesarienne urgente
+4: Cesarienne Sans indication"
+Césarienne avant travail : 1: Oui
+Cholestase gravidique  (0 : Non/1 : Oui)
+Chorioamniotite (0 : Non/1 : Oui)
+Corticothérapie (0 : Non/1 : Oui)
+Deces maternel (0 : Non/1 : Oui)
+Dechirures 3 et 4ème degré
+Declenchement (1 : Oui)
+"Diabete
+0 : Non
+1: Diabete preexistant
+2:Diabete gestationnel"
+Eclampsie (0 : Non/1 : Oui)
+Embolisation (0 : Non/1 : Oui)
+Episiotomie (0 : Non/1 : Oui)
+Anomalie rythme cardiaque hors travail (0 : Non/1 : Oui)
+Anomalie rythme cardiaque pendant travail (0 : Non/1 : Oui)
+"Extraction instrumentale
+1:Forceps
+2:Ventouse
+9:Extr. Instrumentale sans indication"
+"Type de grossesse
+1:mono
+2:multiple"
+Hemorragie de la delivrance (0 : Non/1 : Oui)
+Hellp syndrome (0 : Non/1 : Oui)
+Hemorragie du post-partum (0 : Non/1 : Oui)
+Hematome retroplacentaire et/ou marginal (0 : Non/1 : Oui)
+Hypertension arterielle chronique (0 : Non/1 : Oui)
+Hypertension arterielle gravidique (0 : Non/1 : Oui)
+Hydramnios (0 : Non/1 : Oui)
+Hysterectomie (0 : Non/1 : Oui)
+Interruption medicale de grossesse (0 : Non/1 : Oui)
+Ligature (0 : Non/1 : Oui)
+Menace d'accouchement premature (0 : Non/1 : Oui)
+Oligoamnios (0 : Non/1 : Oui)
+Procréation médicalement assistée (0 : Non/1 : Oui)
+Preeclampsie (0 : Non/1 : Oui)
+Presentation à l'accouchement (0 : Non/1 : Oui)
+Procidence du cordon (0 : Non/1 : Oui)
+Suspicion d'hypotrophie fœtale (0 : Non/1 : Oui)
+"Rupture précoce des membranes
+0:Non
+1:<24h
+2:>24h"
+Rupture prolongee des membranes (0 : Non/1 : Oui)
+Rupture utérine (0 : Non/1 : Oui)
+Transfert en réa (0 : Non/1 : Oui)
+Transfusion (0 : Non/1 : Oui)
+Uterus cicatriciel (0 : Non/1 : Oui)
+transfert in utero (0 : Non/1 : Oui)
+Anesthesie generale (0 : Non/1 : Oui)
+Liquide meconial (0 : Non/1 : Oui)
+Parite du PMSI (0 : Non/1 : Oui)
+Anesthesie generale (0 : Non/1 : Oui)
+"Acte presentation
+0:Presentation cephalique
+1:Presentation  du siege
+2:Grossesse multiple
+3:Cesarienne"
+Placenta acreta (0 : Non/1 : Oui)
+"pph_hemo
+0:Non
+1:Non hémorragique
+2:Hémorragique"
+Tamponnement intra-utérin (0 : Non/1 : Oui)
+Tabac (0 : Non/1 : Oui)
+Hosp. pendant la grossesse (0 : Non/1 : Oui)
+Duree hosp. pendant la grossesse
+Hospitalisation a l'accouchement (0 : Non/1 : Oui)
+Duree sejour avant accouchement
+Duree de sejour post partum de la mere
+Duree de sejour totale pdt la grossesse
+Bilan au cours de la grossesse
+Nb bilans au cours de la grossesse
+Sejours < 18 SA
+Nb sejours < 18 SA
+Date de naissance de l'enfant
+"Sexe de l'enfant
+1:M
+2:F"
+Apgar 5 min
+ph artériel
+poids à la naissance (g)
+Percentile (Mamelle)
+"Percentile (BE)
+0 = ""Eutophiques""
+  1 = ""Hypotrophes""
+  2 = ""Hypotrophes""
+  3 = ""Macrosomes""
+  4 = ""Macrosomes"";"
+"Percentile (BH)
+0 = ""Eutophiques""
+  1 = ""Hypotrophes""
+  2 = ""Hypotrophes""
+  3 = ""Macrosomes""
+  4 = ""Macrosomes"";"
+Dysplasie broncho pulmonaire (0 : Non/1 : Oui)
+Deces (0 : Non/1 : Oui)
+Detresse respiratoire (0 : Non/1 : Oui)
+Malformations (EUROCAT) (0 : Non/1 : Oui)
+Infection néonatale bactérienne (0 : Non/1 : Oui)
+Intubation en salle de naissance (0 : Non/1 : Oui)
+Malformations (0 : Non/1 : Oui)
+Pathologie neurologique lourde (0 : Non/1 : Oui)
+Surfactant (0 : Non/1 : Oui)
+Transfusion sanguine et produits sanguins labiles (0 : Non/1 : Oui)
+Ventilation nasale (0 : Non/1 : Oui)
+Ventilation invasive (0 : Non/1 : Oui)
+Enterocolite Ultra Necrosante (0 : Non/1 : Oui)
+Ischemie cerebrale neonatal (0 : Non/1 : Oui)
+Hemorragie intra-ventriculaire (0 : Non/1 : Oui)
+Leucomalacie periventriculaire (0 : Non/1 : Oui)
+Retinopathie de la prematurite (0 : Non/1 : Oui)
+Encéphalopathie anoxo ischemique (0 : Non/1 : Oui)
+Hospitalisation (0 : Non/1 : Oui)
+Hospitalisation en réanimation (0 : Non/1 : Oui)
+Hospitalisation en néonatal (0 : Non/1 : Oui)
+Hospitalisation en pédiatrie (0 : Non/1 : Oui)
+Hospitalisation à l'unité de Kanguoro (0 : Non/1 : Oui)
+Durée de séjour à la mat
+Durée de séjour en réa
+Durée de séjour en néonat
+Durée de séjour d'hospitalisation
+Durée de séjour totale
+Delai dernieres nouvelles
+Retransfert (0 : Non/1 : Oui)
+Declenchement
+Autre début travail
+Indication de déclenchement
+Autre Indication de déclenchement
+Précision de déclenchement
+Autre précision de déclenchement
+Durée rupture des membranes (heure)
+Apgar 1 min
+Apgar 10 min
+ph veineux
+pathologie de grossesse
+pathologie d'accouchement
+Analgésie 
+Indication césarienne
+Parité corrigée
+Map corrigée
+bas risque
+HTA total (chronique + gravidique)
+Vitalité
+"Mode d'accouchement
+vb:voie basse
+extri:extraction instrumentale
+cesa : césarienne"
+mortalité périnatal cause neuro (0 : Non/1 : Oui)
+Mortalité périnatale (0 : Non/1 : Oui)
+Mortalité néonatale (0 : Non/1 : Oui)
+Mortalité néonatale précoce (0 : Non/1 : Oui)
+Mortalité néonatale tardive (0 : Non/1 : Oui)
+Anomalie rythme cardiaque fœtale (0 : Non/1 : Oui)
+Code du produit sanguin administré
+Délai d'administration calculé entre la date d'administration et la date d'accouchement
+Nombre du culot sanguin
+HPP transfusée (0 : Non/1 : Oui)
+""
+""
+HPP sévère (0 : Non/1 : Oui)
