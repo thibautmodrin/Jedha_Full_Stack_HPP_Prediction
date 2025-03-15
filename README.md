@@ -60,7 +60,7 @@ Les résultats montrent une grande difficulté à obtenir simultanément une bon
 
 ## 🤖 Tracking & Déploiement via Hugging Face
 
-- **MLflow** - <a href="https://thibautmodrin-mlflow.hf.space/" target="_blank">Lien vers MLflow</a>
+- **MLflow** - <a target="_blank" href="https://thibautmodrin-mlflow.hf.space/" >Lien vers MLflow</a>
 - **Application (Streamlit)** - [Lien vers ton application](https://huggingface.co/spaces/ton-app-streamlit)
 
 ## 🛠️ Installation et Utilisation
