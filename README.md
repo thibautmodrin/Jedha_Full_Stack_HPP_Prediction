@@ -97,7 +97,7 @@ print(prediction)
 
 ## 📚 Ressources
 - Lien vers le rapport annuel de la maternité (si disponible)
-- Données anonymisées disponibles [ici](lien-vers-données)
+- Données anonymisées disponibles [ici](https://github.com/thibautmodrin/Jedha_Full_Stack_HPP_Prediction/tree/main/00_Data)
 
 ---
 
