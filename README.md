@@ -40,11 +40,11 @@ L'objectif principal est de prédire la survenue d'une HPP sévère dès l'arriv
 
 **Pourquoi cette approche ?**
 - Possibilité de modéliser des interactions complexes entre les variables.
-- Adaptation à des jeux de données larges.
+- XGBboost largement adopté par la communauté scientifique pour ces performances.
 
 **Observations :**
 - Modèle performant en recall mais toujours limité en précision.
-- Ressources computationnelles importantes nécessaires.
+- Sous échantillonnage plus impactant sur le score
 
 ## 📊 Synthèse des résultats actuels
 
