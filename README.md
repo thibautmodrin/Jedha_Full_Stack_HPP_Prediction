@@ -3,7 +3,7 @@
 🌟 **Prédiction d'Hémorragie du Post-Partum Sévère (HPP)**
 
 🚀 **Projet de Machine Learning pour la Maternité de Bourgogne**  
-💪 **Créateur : [Ton Nom]**
+💪 **Créateur : Thibaut Modrin**
 
 ## 🌐 Contexte
 Ce projet est né d'une collaboration avec un statisticien travaillant à la maternité de Bourgogne, responsable de la compilation annuelle des données obstétricales régionales. Après avoir analysé le rapport annuel, l'HPP sévère est apparue comme une préoccupation majeure pour la maternité, justifiant la création d'un modèle prédictif basé sur des données disponibles avant l'accouchement.
