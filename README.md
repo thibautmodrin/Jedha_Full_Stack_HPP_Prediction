@@ -1,18 +1,18 @@
 # Jedha_Full_Stack_HPP_Prediction
 
-🌟 Prédiction d'Hémorragie du Post-Partum Sévère (HPP)
+🌟 **Prédiction d'Hémorragie du Post-Partum Sévère (HPP)**
 
-🚀 Projet de Machine Learning pour la Maternité de Bourgogne  
-💪 Créateur : [Ton Nom]
+🚀 **Projet de Machine Learning pour la Maternité de Bourgogne**  
+💪 **Créateur : [Ton Nom]**
 
 ## 🌐 Contexte
 Ce projet est né d'une collaboration avec un statisticien travaillant à la maternité de Bourgogne, responsable de la compilation annuelle des données obstétricales régionales. Après avoir analysé le rapport annuel, l'HPP sévère est apparue comme une préoccupation majeure pour la maternité, justifiant la création d'un modèle prédictif basé sur des données disponibles avant l'accouchement.
 
 ## 🎯 Objectif
 L'objectif principal est de prédire la survenue d'une HPP sévère dès l'arrivée d'une patiente à la maternité, à partir des données exclusivement recueillies avant l'accouchement. Différentes approches de gestion du déséquilibre de classes (classe minoritaire) ont été explorées, notamment :
-- Régression logistique avec différents types de rééquilibrage (SMOTE, SMOTEENN, RandomUnderSampler).
-- XGBoost et Random Forest avec optimisation hyperparamétrique.
-- Réseau de neurones avec gestion du déséquilibre.
+- Régression logistique avec différents types de rééquilibrage (SMOTE, SMOTEENN, SMOTETomek, RandomUnderSampler, surpondération de la classe minoritaire).
+- Random Forest.
+- XGBoost.
 
 ## 📝 Modélisation et Expériences
 
@@ -26,9 +26,9 @@ L'objectif principal est de prédire la survenue d'une HPP sévère dès l'arriv
 - Bon rappel obtenu (>60%) mais précision insatisfaisante (<10%).
 - SMOTEENN a légèrement amélioré les résultats.
 
-### 📌 2. Random Forest et XGBoost
+### 📌 2. Random Forest
 
-**Pourquoi ces modèles ?**
+**Pourquoi ce modèle ?**
 - Capacité à capturer les relations non-linéaires complexes.
 - Bonne gestion naturelle des données déséquilibrées avec hyperparamétrage optimisé.
 
@@ -36,14 +36,14 @@ L'objectif principal est de prédire la survenue d'une HPP sévère dès l'arriv
 - Difficulté à atteindre un bon équilibre précision-rappel.
 - Recall élevé mais faible précision persistante.
 
-### 📌 3. Réseau de Neurones
+### 📌 3. XGBoost
 
 **Pourquoi cette approche ?**
 - Possibilité de modéliser des interactions complexes entre les variables.
 - Adaptation à des jeux de données larges.
 
 **Observations :**
-- Modèle complexe et performant en recall mais toujours limité en précision.
+- Modèle performant en recall mais toujours limité en précision.
 - Ressources computationnelles importantes nécessaires.
 
 ## 📊 Synthèse des résultats actuels
@@ -52,7 +52,6 @@ L'objectif principal est de prédire la survenue d'une HPP sévère dès l'arriv
 |--------|--------|-----------|--------------|-------------|
 | Logistic Regression (SMOTE) | 69% | ~8% | Bonne interprétabilité, rapide | Très faible précision |
 | Random Forest / XGBoost | ~65% | ~9% | Modèles robustes | Difficulté à équilibrer précision-recall |
-| Réseau de neurones | ~70% | ~6% | Modèle puissant | Complexité élevée, ressource computationnelle |
 
 ## 🔍 Conclusion intermédiaire
 
