@@ -1,6 +1,6 @@
-# Jedha_Full_Stack_HPP_Prediction
+# Jedha_Full_Stack_HPP_Prediction ( En construction ceci n'est pas la version finale )
 
-🌟 **Prédiction d'Hémorragie du Post-Partum Sévère (HPP) ( En construction ceci n'est pas la version finale )**
+🌟 **Prédiction d'Hémorragie du Post-Partum Sévère (HPP)**
 
 🚀 **Projet de Machine Learning pour la Maternité de Bourgogne**  
 💪 **Créateur : Thibaut Modrin**
