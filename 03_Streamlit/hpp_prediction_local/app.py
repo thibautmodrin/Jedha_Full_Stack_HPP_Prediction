@@ -2,10 +2,24 @@ import streamlit as st
 import pandas as pd
 import joblib
 import numpy as np
+import os
 from sklearn.metrics import precision_score, recall_score, f1_score, make_scorer
 
-# Charger le modèle entraîné
-model = joblib.load('best_model_logreg_f1_Sans_resampling.joblib')
+# Définir le chemin du modèle
+model_path = 'best_model_logreg_f1_Sans_resampling.joblib'
+
+# Vérifier si le fichier existe
+if not os.path.exists(model_path):
+    st.error(f"Le fichier modèle '{model_path}' n'existe pas. Veuillez vérifier le chemin du fichier.")
+    model = None
+else:
+    # Charger le modèle entraîné
+    try:
+        model = joblib.load(model_path)
+        st.success("Modèle chargé avec succès!")
+    except Exception as e:
+        st.error(f"Erreur lors du chargement du modèle: {e}")
+        model = None
 
 # Titre de l'application
 st.title("🩺 Application de Prédiction d'HPP sévère")
@@ -13,7 +27,7 @@ st.title("🩺 Application de Prédiction d'HPP sévère")
 # Uploader le fichier CSV
 uploaded_file = st.file_uploader("Importer votre fichier CSV avec les variables nécessaires", type="csv")
 
-if uploaded_file:
+if uploaded_file and model is not None:
     # Lire le CSV
     data = pd.read_csv(uploaded_file)
     st.write("### Données importées :")
