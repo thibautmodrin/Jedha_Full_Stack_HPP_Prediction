@@ -37,17 +37,45 @@ if uploaded_file and model is not None:
     if st.button("Prédire"):
         with st.spinner('Prédictions en cours...'):
             try:
-                # Faire la prédiction avec le pipeline joblib
-                predictions = model.predict(data)
-                prediction_probs = model.predict_proba(data)[:, 1]  # Probabilité classe positive
+                # Vérifier et traiter les valeurs manquantes
+                if data.isna().any().any():
+                    # Compter le nombre de lignes avant le dropna
+                    rows_before = len(data)
+                    
+                    # Supprimer les lignes avec des valeurs manquantes
+                    data = data.dropna()
+                    
+                    # Compter le nombre de lignes après le dropna
+                    rows_after = len(data)
+                    rows_removed = rows_before - rows_after
+                    
+                    # Afficher un message d'avertissement
+                    st.warning(f"Des valeurs manquantes ont été détectées dans les données. {rows_removed} lignes contenant des valeurs manquantes ont été supprimées. Nombre de lignes restantes: {rows_after}.")
+                
+                # Extraire le préprocesseur du pipeline si le modèle est un pipeline
+                if hasattr(model, 'named_steps') and 'preprocessor' in model.named_steps:
+                    preprocessor = model.named_steps['preprocessor']
+                    # Prétraiter les données
+                    X_processed = preprocessor.transform(data)
+                    # Faire la prédiction avec le modèle
+                    classifier = model.named_steps['classifier']
+                    predictions = classifier.predict(X_processed)
+                    prediction_probs = classifier.predict_proba(X_processed)[:, 1]
+                else:
+                    # Si le modèle n'a pas de préprocesseur explicite, retourner une erreur
+                    st.error("Le modèle ne contient pas de préprocesseur. Un préprocesseur est nécessaire pour traiter les données avant la prédiction.")
+                    raise ValueError("Modèle sans préprocesseur détecté. Impossible de continuer la prédiction.")
 
                 # Ajouter les résultats au DataFrame
                 data['Prédiction'] = predictions
-                data['Probabilité_HPP'] = prediction_probs
+                data['Probabilité_HPP (%)'] = prediction_probs * 100  # Convertir en pourcentage
+
+                # Trier les résultats par probabilité d'HPP décroissante
+                data_sorted = data.sort_values(by='Probabilité_HPP (%)', ascending=False)
 
                 # Afficher les résultats
-                st.write("### Résultats des Prédictions :")
-                st.dataframe(data)
+                st.write("### Résultats des Prédictions (triés par probabilité d'HPP décroissante) :")
+                st.dataframe(data_sorted)
                 
                 # Afficher les métriques si disponibles
                 if 'y' in data.columns:
@@ -55,12 +83,14 @@ if uploaded_file and model is not None:
                     precision = precision_score(data['y'], predictions, zero_division=0)
                     recall = recall_score(data['y'], predictions, zero_division=0)
                     f1 = f1_score(data['y'], predictions, zero_division=0)
-                    st.write(f"Précision: {precision:.4f}")
-                    st.write(f"Rappel: {recall:.4f}")
-                    st.write(f"Score F1: {f1:.4f}")
+                    st.write(f"Précision: {precision:.4f} - Mesure la proportion de cas positifs correctement identifiés parmi tous les cas prédits positifs.")
+                    st.write(f"Rappel: {recall:.4f} - Mesure la proportion de cas positifs correctement identifiés parmi tous les cas réellement positifs.")
+                    st.write(f"Score F1: {f1:.4f} - Moyenne harmonique entre précision et rappel, équilibrant ces deux métriques.")
+                    
+                    st.info("Pour la prédiction d'HPP sévère, un rappel élevé est particulièrement important car il indique la capacité du modèle à identifier correctement les cas à risque, minimisant ainsi les faux négatifs qui pourraient être dangereux dans un contexte médical.")
 
-                # Bouton de téléchargement des résultats
-                csv = data.to_csv(index=False).encode('utf-8')
+                # Bouton de téléchargement des résultats (triés)
+                csv = data_sorted.to_csv(index=False).encode('utf-8')
                 st.download_button(
                     label="Télécharger les résultats en CSV",
                     data=csv,
