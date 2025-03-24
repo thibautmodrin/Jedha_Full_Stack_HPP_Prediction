@@ -23,7 +23,7 @@ L'objectif principal est de prédire la survenue d'une HPP sévère dès l'arriv
 - Gestion efficace du déséquilibre via SMOTE et ses variantes.
 
 **Observations :**
-- Bon rappel obtenu (>60%) mais précision insatisfaisante (<10%).
+- Bon Recall  obtenu (>60%) mais precision insatisfaisante (<10%).
 - SMOTEENN a légèrement amélioré les résultats.
 
 ### 📌 2. Random Forest
@@ -34,7 +34,7 @@ L'objectif principal est de prédire la survenue d'une HPP sévère dès l'arriv
 
 **Observations :**
 - Difficulté à atteindre un bon équilibre précision-rappel.
-- Recall élevé mais faible précision persistante.
+- Recall élevé mais faible precision persistante.
 
 ### 📌 3. XGBoost
 
@@ -55,7 +55,7 @@ L'objectif principal est de prédire la survenue d'une HPP sévère dès l'arriv
 
 ## 🔍 Conclusion intermédiaire
 
-Les résultats montrent une grande difficulté à obtenir simultanément une bonne précision et un rappel élevé, reflétant la complexité du problème (classe extrêmement déséquilibrée). Des pistes d'amélioration incluent l'identification d'une autre variable cible ou l'utilisation de méthodes avancées spécifiques à l'imbalancing.
+Les résultats montrent une grande difficulté à obtenir simultanément une bonne précision et un recall élevé, reflétant la complexité du problème (classe extrêmement déséquilibrée). Des pistes d'amélioration incluent l'identification d'une autre variable cible ou l'utilisation de méthodes avancées spécifiques à l'imbalancing.
 
 ## 🤖 Tracking & Déploiement via Hugging Face
 
