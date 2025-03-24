@@ -60,7 +60,7 @@ Les résultats montrent une grande difficulté à obtenir simultanément une bon
 ## 🤖 Tracking & Déploiement via Hugging Face
 
 - **MLflow** - [Lien vers MLflow](https://thibautmodrin-mlflow.hf.space/)
-- **Application (Streamlit)** - [Lien vers ton application](https://github.com/thibautmodrin/Jedha_Full_Stack_HPP_Prediction/blob/main/03_Streamlit/Demo_App_Streamlit.mp4)
+- **Application (Streamlit)** - [Lien vers ton application](https://github.com/thibautmodrin/Jedha_Full_Stack_HPP_Prediction/blob/main/03_Streamlit/Demo_Streamlit_HPP_Prediction.mp4)
 
 ## 🛠️ Installation et Utilisation
 
