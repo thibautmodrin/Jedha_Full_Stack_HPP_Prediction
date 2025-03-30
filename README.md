@@ -62,6 +62,13 @@ Les résultats montrent une grande difficulté à obtenir simultanément une bon
 - **MLflow** - [Lien vers MLflow](https://thibautmodrin-mlflow.hf.space/)
 - **Application (Streamlit)** - [Lien vers ton application](https://github.com/thibautmodrin/Jedha_Full_Stack_HPP_Prediction/blob/main/03_Streamlit/Demo_Streamlit_HPP_Prediction.mp4)
 
+## 🔄 Suivi Workflow
+
+Le workflow du projet est visualisé via Excalidraw pour une meilleure compréhension du processus de bout en bout.
+
+- **Diagramme de workflow** - [Voir sur Excalidraw](https://excalidraw.com/#json=umo1-2s4zp6QGrUr61F7n,4DxJQNvO13p6kJnvnuRSeA)
+
+
 ## 🛠️ Installation et Utilisation
 
 Cloner le projet depuis GitHub :
