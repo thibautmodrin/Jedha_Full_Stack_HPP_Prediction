@@ -66,7 +66,7 @@ Les résultats montrent une grande difficulté à obtenir simultanément une bon
 
 Le workflow du projet est visualisé via Excalidraw pour une meilleure compréhension du processus de bout en bout.
 
-- **Diagramme de workflow** - [Voir sur Excalidraw](https://excalidraw.com/#json=0l9l7Kba-xb6b_k1yeslK,I9JcoS9n_fWsoFlqSUqTjg)
+- **Diagramme de workflow** - [Voir sur Excalidraw](https://excalidraw.com/#json=rnFRCGx3gE_yHOTYRAbOv,cYMyt0FhFy2jG_s2-aF4bw)
 
 
 ## 🛠️ Installation et Utilisation
