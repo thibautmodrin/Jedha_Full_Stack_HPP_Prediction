@@ -1,112 +1,120 @@
-# Jedha_Full_Stack_HPP_Prediction ( En construction ceci n'est pas la version finale )
+# 🧠 Prédiction d’Hémorragie du Post-Partum Sévère (HPP)
 
-🌟 **Prédiction d'Hémorragie du Post-Partum Sévère (HPP)**
-
-🚀 **Projet de Machine Learning pour la Maternité de Bourgogne**  
-💪 **Créateur : Thibaut Modrin**
-
-## 🌐 Contexte
-Ce projet est né d'une collaboration avec un statisticien travaillant à la maternité de Bourgogne, responsable de la compilation annuelle des données obstétricales régionales. Après avoir analysé le rapport annuel, l'HPP sévère est apparue comme une préoccupation majeure pour la maternité, justifiant la création d'un modèle prédictif basé sur des données disponibles avant l'accouchement.
-
-## 🎯 Objectif
-L'objectif principal est de prédire la survenue d'une HPP sévère dès l'arrivée d'une patiente à la maternité, à partir des données exclusivement recueillies avant l'accouchement. Différentes approches de gestion du déséquilibre de classes (classe minoritaire) ont été explorées, notamment :
-- Régression logistique avec différents types de rééquilibrage (SMOTE, SMOTEENN, SMOTETomek, RandomUnderSampler, surpondération de la classe minoritaire).
-- Random Forest.
-- XGBoost.
-
-## 📝 Modélisation et Expériences
-
-### 📌 1. Régression Logistique avec gestion du déséquilibre (SMOTE et variantes)
-
-**Pourquoi cette approche ?**
-- Simplicité d'interprétation et rapidité d'exécution.
-- Gestion efficace du déséquilibre via SMOTE et ses variantes.
-
-**Observations :**
-- Bon Recall  obtenu (>60%) mais precision insatisfaisante (<10%).
-- SMOTEENN a légèrement amélioré les résultats.
-
-### 📌 2. Random Forest
-
-**Pourquoi ce modèle ?**
-- Capacité à capturer les relations non-linéaires complexes.
-- Bonne gestion naturelle des données déséquilibrées avec hyperparamétrage optimisé.
-
-**Observations :**
-- Difficulté à atteindre un bon équilibre précision-rappel.
-- Recall élevé mais faible precision persistante.
-
-### 📌 3. XGBoost
-
-**Pourquoi cette approche ?**
-- Possibilité de modéliser des interactions complexes entre les variables.
-- XGBboost largement adopté par la communauté scientifique pour ces performances.
-
-**Observations :**
-- Modèle performant en recall mais toujours limité en précision.
-- Sous échantillonnage plus impactant sur le score
-
-## 📊 Synthèse des résultats actuels
-
-| Modèle | Recall | Précision | Points forts | Limitations |
-|--------|--------|-----------|--------------|-------------|
-| Logistic Regression (SMOTE) | 69% | ~8% | Bonne interprétabilité, rapide | Très faible précision |
-| Random Forest / XGBoost | ~65% | ~9% | Modèles robustes | Difficulté à équilibrer précision-recall |
-
-## 🔍 Conclusion intermédiaire
-
-Les résultats montrent une grande difficulté à obtenir simultanément une bonne précision et un recall élevé, reflétant la complexité du problème (classe extrêmement déséquilibrée). Des pistes d'amélioration incluent l'identification d'une autre variable cible ou l'utilisation de méthodes avancées spécifiques à l'imbalancing.
-
-## 🤖 Tracking & Déploiement via Hugging Face
-
-- **MLflow** - [Lien vers MLflow](https://thibautmodrin-mlflow.hf.space/)
-- **Application (Streamlit)** - [Lien vers ton application](https://github.com/thibautmodrin/Jedha_Full_Stack_HPP_Prediction/blob/main/03_Streamlit/Demo_Streamlit_HPP_Prediction.mp4)
-
-## 🔄 Suivi Workflow
-
-Le workflow du projet est visualisé via Excalidraw pour une meilleure compréhension du processus de bout en bout.
-
-- **Diagramme de workflow** - [Voir sur Excalidraw](https://excalidraw.com/#json=rnFRCGx3gE_yHOTYRAbOv,cYMyt0FhFy2jG_s2-aF4bw)
-
-
-## 🛠️ Installation et Utilisation
-
-Cloner le projet depuis GitHub :
-
-```bash
-git clone https://github.com/ton-github/prediction-hpp-severe.git
-cd prediction-hpp-severe
-pip install -r requirements.txt
-```
-
-Exemple de prédiction :
-
-```python
-import joblib
-
-model = joblib.load('hpp_severe_prediction_model.pkl')
-patient_data = [[valeur1, valeur2, ..., valeurN]]
-prediction = model.predict(patient_data)
-print(prediction)
-```
-
-## 📂 Structure du projet GitHub
-
-```
-.
-├── notebooks/          # Carnets Jupyter exploratoires
-├── streamlit/          # Application Streamlit (POC)
-├── mlflow/             # Expériences MLflow
-├── data/               # Datasets utilisés
-├── README.md           # Documentation du projet
-└── requirements.txt    # Dépendances Python
-```
-
-## 📚 Ressources
-- Lien vers le rapport annuel de la maternité (si disponible)
-- Données anonymisées disponibles [ici](https://github.com/thibautmodrin/Jedha_Full_Stack_HPP_Prediction/tree/main/00_Data)
+🌟 Projet Data Science & MLOps mené avec la Maternité de Bourgogne  
+👨‍💻 Thibaut Modrin – Data Scientist & Engineer Fullstack
 
 ---
 
-✨ Merci à la maternité de Bourgogne pour les données fournies et leur collaboration précieuse dans ce projet ! 🌟
+## 🌐 Contexte
 
+Ce projet est né d’une collaboration avec un statisticien de la Maternité de Bourgogne, responsable de l’analyse annuelle des données obstétricales régionales.
+
+Suite à l’étude de leur rapport, l’HPP sévère est apparue comme un enjeu clinique prioritaire, justifiant la mise en place d’un outil prédictif dès l’arrivée des patientes, pour mieux anticiper les risques et mobiliser les ressources.
+
+---
+
+## 🎯 Objectif
+
+Développer un modèle de Machine Learning capable de prédire le risque d’HPP sévère avant l’accouchement, à partir des données disponibles à l’admission.
+
+---
+
+## ⚙️ Approches & Modélisation
+
+Plusieurs techniques ont été testées, en raison de la très forte déséquilibration des classes (HPP sévère ≈ 2 %).
+
+| Modèle                        | Rappel (Recall) | Précision (Precision) | Points forts               | Limites                        |
+|------------------------------|------------------|------------------------|----------------------------|--------------------------------|
+| Régression logistique + SMOTE | 69 %             | ~8 %                   | Simple & interprétable     | Très faible précision          |
+| Random Forest                 | 65 %             | ~9 %                   | Non-linéaire & robuste     | Rappel ↔ Précision difficile   |
+| XGBoost                       | 66 %             | ~9 %                   | Optimisation avancée       | Résultats similaires           |
+
+> Techniques de rééquilibrage testées : SMOTE, SMOTEENN, RandomUnderSampler, surpondération.
+
+---
+
+## 📌 Interprétation métier
+
+Dans un contexte clinique :
+
+- Un bon **recall** (*rappel* – taux de détection des cas réels) est prioritaire, afin de ne pas rater une patiente à risque, quitte à déclencher de fausses alertes.
+- Une faible **precision** (*précision* – fiabilité des alertes positives) est acceptable tant qu’elle ne surcharge pas les ressources.
+
+Ce projet s’inscrit dans une logique de triage médical assisté par IA, où le coût d’un faux négatif est bien plus élevé que celui d’un faux positif.
+
+---
+
+## 🖥️ Application pour non-techniciens
+
+L’interface Streamlit permet à un personnel soignant de :
+
+1. Renseigner les données cliniques à l’admission.
+2. Obtenir une prédiction immédiate du risque d’HPP sévère.
+3. (À venir) Générer un rapport PDF de synthèse à archiver.
+
+🎯 Objectif : faciliter une prise de décision rapide, sans intervention d’un data scientist.
+
+---
+
+## 📦 Stack technique
+
+| Domaine              | Outils utilisés                            |
+|----------------------|--------------------------------------------|
+| Modélisation         | `scikit-learn`, `XGBoost`                  |
+| Suivi expérimental   | `MLflow`                                   |
+| Interface utilisateur| `Streamlit`                                |
+| Orchestration        | `Python`, `joblib`, `pandas`, `numpy`      |
+| Déploiement prévu    | `Docker`, `Hugging Face Spaces`            |
+
+---
+
+## 📊 Démonstrations
+
+- 🎬 [Vidéo démo Streamlit (MP4)](https://github.com/thibautmodrin/Jedha_Full_Stack_HPP_Prediction/blob/main/03_Streamlit/Demo_Streamlit_HPP_Prediction.mp4)
+- 🔍 [Suivi MLflow des modèles](https://thibautmodrin-mlflow.hf.space/)
+- 🧩 [Diagramme Excalidraw du workflow](https://excalidraw.com/#json=rnFRCGx3gE_yHOTYRAbOv,cYMyt0FhFy2jG_s2-aF4bw)
+
+---
+
+## 🛠️ Installation locale
+
+```bash
+git clone https://github.com/thibautmodrin/Jedha_Full_Stack_HPP_Prediction.git
+cd Jedha_Full_Stack_HPP_Prediction
+pip install -r requirements.txt
+```
+---
+
+## 🔐 Confidentialité & éthique
+- Toutes les données ont été anonymisées avant traitement.
+
+- Aucun identifiant personnel n’est stocké ni exploité.
+
+- Le projet respecte les normes du RGPD en vigueur.
+
+---
+
+## 🛤️ Améliorations futures
+- Intégration de données post-accouchement.
+
+- Génération automatique de rapports PDF.
+
+- Déploiement cloud sécurisé (Streamlit Cloud / AWS / Azure).
+
+- Implémentation de tests unitaires.
+
+- Intégration CI/CD (GitHub Actions).
+
+---
+
+## 🙏 Remerciements
+Merci à l’équipe de la Maternité de Bourgogne pour la mise à disposition des données et leur soutien dans l’exploration de solutions innovantes pour la santé publique.
+
+---
+
+## 📬 Contact
+📧 Email : thibaut.m@exemple.com
+
+🔗 LinkedIn : https://www.linkedin.com/in/thibautmodrin
+
+🧰 Portfolio GitHub : https://github.com/thibautmodrin
