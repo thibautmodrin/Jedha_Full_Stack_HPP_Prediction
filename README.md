@@ -79,6 +79,14 @@ L’interface Streamlit permet à un personnel soignant de :
 ## 🛠️ Installation locale
 
 ```bash
+git clone https://github.com/thibautmodrin/Jedha_Full_Stack_HPP_Prediction.git
+cd Jedha_Full_Stack_HPP_Prediction
+pip install -r requirements.txt
+```
+---
+
+## Exemple de prédiction en Python
+```bash
 import joblib
 model = joblib.load('hpp_severe_prediction_model.pkl')
 patient_data = [[valeur1, valeur2, ..., valeurN]]
