@@ -1,13 +1,13 @@
 # 🧠 Prédiction d’Hémorragie du Post-Partum Sévère (HPP)
 
-🌟 Projet Data Science & MLOps mené avec la Maternité de Bourgogne  
+🌟 Projet Data Science & MLOps mené avec une maternité  
 👨‍💻 Thibaut Modrin – Data Scientist & Engineer Fullstack
 
 ---
 
 ## 🌐 Contexte
 
-Ce projet est né d’une collaboration avec un statisticien de la Maternité de Bourgogne, responsable de l’analyse annuelle des données obstétricales régionales.
+Ce projet est né d’une collaboration avec un statisticien d'une maernité, responsable de l’analyse annuelle des données obstétricales régionales.
 
 Suite à l’étude de leur rapport, l’HPP sévère est apparue comme un enjeu clinique prioritaire, justifiant la mise en place d’un outil prédictif dès l’arrivée des patientes, pour mieux anticiper les risques et mobiliser les ressources.
 
@@ -118,7 +118,7 @@ print(prediction)
 ---
 
 ## 🙏 Remerciements
-Merci à l’équipe de la Maternité de Bourgogne pour la mise à disposition des données et leur soutien dans l’exploration de solutions innovantes pour la santé publique.
+Merci à l’équipe de la Maternité pour la mise à disposition des données et leur soutien dans l’exploration de solutions innovantes pour la santé publique.
 
 ---
 
