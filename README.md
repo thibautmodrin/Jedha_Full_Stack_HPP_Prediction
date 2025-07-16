@@ -123,7 +123,7 @@ Merci à l’équipe de la Maternité pour la mise à disposition des données e
 ---
 
 ## 📬 Contact
-📧 Email : thibaut.m@exemple.com
+📧 Email : thibaut.modrin@gmail.com
 
 🔗 LinkedIn : https://www.linkedin.com/in/thibautmodrin
 
