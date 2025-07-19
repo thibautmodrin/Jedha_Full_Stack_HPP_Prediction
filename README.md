@@ -7,7 +7,7 @@
 
 ## 🌐 Contexte
 
-Ce projet est né d’une collaboration avec un statisticien d'une maernité, responsable de l’analyse annuelle des données obstétricales régionales.
+Ce projet est né d’une collaboration avec un statisticien d'une maternité, responsable de l’analyse annuelle des données obstétricales régionales.
 
 Suite à l’étude de leur rapport, l’HPP sévère est apparue comme un enjeu clinique prioritaire, justifiant la mise en place d’un outil prédictif dès l’arrivée des patientes, pour mieux anticiper les risques et mobiliser les ressources.
 
